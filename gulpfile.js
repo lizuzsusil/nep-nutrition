@@ -6,6 +6,8 @@ import browserSync from 'browser-sync';
 import { deleteAsync } from 'del';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
+import sourcemaps from 'gulp-sourcemaps';
+import fs from 'fs-extra';
 
 const sass = gulpSass(dartSass);
 const bs = browserSync.create();
@@ -37,29 +39,33 @@ async function clean() {
 // Compile SCSS to CSS
 function styles() {
   return gulp.src(paths.scss.src)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(cleanCSS())
-    .pipe(gulp.dest(paths.scss.dest))
-    .pipe(bs.stream());
+      .pipe(sourcemaps.init()) // Initialize sourcemaps
+      .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(cleanCSS())
+      .pipe(sourcemaps.write('.')) // Write sourcemaps
+      .pipe(gulp.dest(paths.scss.dest))
+      .pipe(bs.stream());
 }
 
 // Process HTML and include components
 function html() {
   return gulp.src(paths.html.src)
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest(paths.html.dest))
-    .pipe(bs.stream());
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest(paths.html.dest))
+      .pipe(bs.stream());
 }
 
 // Copy assets
-function assets() {
-  return gulp.src(paths.assets.src)
-    .pipe(gulp.dest(paths.assets.dest));
+function assets(done) {
+  fs.copySync('src/assets', 'dist/assets');
+  console.log('✅ Assets copied without modification using fs-extra!');
+  done();
 }
+
 
 // Watch files
 function watch() {
@@ -70,7 +76,8 @@ function watch() {
   });
 
   gulp.watch(paths.scss.src, styles);
-  gulp.watch([paths.html.src, paths.components.src], html);
+  gulp.watch(paths.html.src, html);
+  gulp.watch(paths.components.src, html);
   gulp.watch(paths.assets.src, assets);
 }
 
