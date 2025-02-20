@@ -5,7 +5,9 @@
                 <div class="col-12 col-lg-2 d-flex align-items-start footer-logo-wrapper">
                     <img src="../assets/images/logo.jpg" alt="NepNutrition" class="img-fluid footer-logo">
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+
+                <!--This Section for desktop view menu listing-->
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 d-md-block d-none">
                     <p class="fw-medium">Quick Links</p>
                     <ul class="list-unstyled footer-nav mb-0">
                         <li class="me-0"><a class="nav-item text-decoration-none" href="/news">News</a></li>
@@ -14,7 +16,7 @@
                         <li class="me-0"><a class="nav-item text-decoration-none" href="/authenticity">Insights</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-md-6 col-12 mb-5 mb-lg-0 d-md-block d-none">
                     <p class="fw-medium">Categories</p>
                     <ul class="list-unstyled footer-nav mb-0">
                         <li class="me-0"><a class="nav-item text-decoration-none" href="/news">Black Line</a></li>
@@ -24,6 +26,48 @@
                         </li>
                     </ul>
                 </div>
+
+                <!--This Section for mobile view menu listing-->
+                <div class="col-12 d-md-none d-block mb-md-0 mb-4">
+                    <div class="accordion" id="menuAccordion">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed py-3 px-2 bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuAccordion-collapseTwo" aria-expanded="false" aria-controls="menuAccordion-collapseTwo">
+                                    Quick Links
+                                </button>
+                            </h2>
+                            <div id="menuAccordion-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body p-3 border-top">
+                                    <ul class="list-unstyled footer-nav mb-0">
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/news">News</a></li>
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/authenticity">Authenticity</a>
+                                        </li>
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/authenticity">Insights</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed py-3 px-2 bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuAccordion-collapseThree" aria-expanded="false" aria-controls="menuAccordion-collapseThree">
+                                    Categories
+                                </button>
+                            </h2>
+                            <div id="menuAccordion-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body p-3 border-top">
+                                    <ul class="list-unstyled footer-nav mb-0">
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/news">Black Line</a></li>
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/authenticity">Gold Line</a>
+                                        </li>
+                                        <li class="me-0"><a class="nav-item text-decoration-none d-block" href="/authenticity">Silver Line</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-4 col-12 mb-0 mb-lg-0">
                     <div class="contact-info">
                         <p class="contact-detail justify-content-center justify-content-lg-start">

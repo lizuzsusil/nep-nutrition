@@ -4475,16 +4475,30 @@ textarea.form-control-lg {
   --npn-accordion-btn-padding-y: 1rem;
   --npn-accordion-btn-color: var(--npn-body-color);
   --npn-accordion-btn-bg: var(--npn-accordion-bg);
-  --npn-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
-  --npn-accordion-btn-icon-width: 1.25rem;
+  --npn-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --npn-accordion-btn-icon-width: 1rem;
   --npn-accordion-btn-icon-transform: rotate(-180deg);
   --npn-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --npn-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23070707' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --npn-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
   --npn-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.25);
   --npn-accordion-body-padding-x: 1.25rem;
   --npn-accordion-body-padding-y: 1rem;
   --npn-accordion-active-color: var(--npn-primary-text-emphasis);
   --npn-accordion-active-bg: var(--npn-primary-bg-subtle);
+}
+
+.accordion .accordion-item {
+  border-bottom: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.accordion .accordion-item:not(:last-child) {
+  border-bottom: 1px solid rgba(var(--npn-white-rgb), .25);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .accordion-button {
