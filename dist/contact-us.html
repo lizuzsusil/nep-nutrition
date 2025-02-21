@@ -12,7 +12,7 @@
     <script src="../assets/js/nepNutrition.min.js" async></script>
 </head>
 <body>
-    <nav class="header">
+<nav class="header">
     <div class="wrapper-fluid">
         <div class="header-container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="/">
@@ -32,11 +32,113 @@
         </div>
     </div>
 </nav>
-    <main>
-        <h1>Welcome!</h1>
-        testasdfasdf
-    </main>
-    <footer class="footer text-white">
+<section class="pageBanner position-relative" id="pageBanner">
+    <div class="image-wrapper">
+        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid">
+    </div>
+    <div class="content-wrapper text-center position-absolute">
+        <p class="text-white mb-4">Contact Us</p>
+        <h1 class="text-white mb-4">We’d love to hear from you</h1>
+        <h4 class="text-dusty-grey fw-normal">Our team is always here to help you</h4>
+    </div>
+</section>
+<main>
+    <section class="contact-details">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="align-items-center bg-apple-green d-inline-flex icon justify-content-center mb-3 rounded-circle p-2">
+                        <svg class="p-1" viewBox="0 0 26 18">
+                            <use href="../assets/images/icons.svg#icon-email-filled"></use>
+                        </svg>
+                    </div>
+                    <h5 class="text-white fw-medium mb-2">Email</h5>
+                    <p class="text-dusty-grey mb-3">We are here to assist you</p>
+                    <p class="text-white small">leodlibra@gmail.com</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="align-items-center bg-apple-green d-inline-flex icon justify-content-center mb-3 rounded-circle p-2">
+                        <svg class="p-1" viewBox="0 0 19 24">
+                            <use href="../assets/images/icons.svg#icon-location-filled"></use>
+                        </svg>
+                    </div>
+                    <h5 class="text-white fw-medium mb-2">Office</h5>
+                    <p class="text-dusty-grey mb-3">Come say hello at our office</p>
+                    <p class="text-white small">DAS Tower, Lazimpat, 44600,
+                        Kathmandu, Nepal</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="align-items-center bg-apple-green d-inline-flex icon justify-content-center mb-3 rounded-circle p-2">
+                        <svg class="p-1" viewBox="0 0 23 23">
+                            <use href="../assets/images/icons.svg#icon-phone-filled"></use>
+                        </svg>
+                    </div>
+                    <h5 class="text-white fw-medium mb-2">Phone</h5>
+                    <p class="text-dusty-grey mb-3">Sun - Fri from 9AM to 8PM</p>
+                    <p class="text-white small">+977-9808111174</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map-section bg-young-night">
+        <div class="wrapper">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28255.6792589885!2d85.30165759245662!3d27.718524132268325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1857d1f77871%3A0xc5b0391005a641fd!2sKathmandu%20Durbar%20Square!5e0!3m2!1sen!2snp!4v1740160157178!5m2!1sen!2snp"
+                        width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <h2 class="text-white text-center py-5 mb-0">Find Us Here!</h2>
+        </div>
+    </section>
+    <section class="form-section my-6">
+        <div class="wrapper">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-header mb-6">
+                        <h2 class="text-white fw-bold mb-3 text-center">ANY QUESTIONS OR REMARKS?</h2>
+                        <h5 class="text-dusty-grey fw-normal text-center">Just write us a message!</h5>
+                    </div>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="first-name" class="form-label text-warm-grey small">First Name<span class="text-warm-grey ms-1">*</span></label>
+                                    <input type="text" class="form-control" id="first-name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="last-name" class="form-label text-warm-grey small">Last Name<span class="text-warm-grey ms-1">*</span></label>
+                                    <input type="text" class="form-control" id="last-name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label text-warm-grey small">Email<span class="text-warm-grey ms-1">*</span></label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="phone-number" class="form-label text-warm-grey small">Phone Number<span class="text-warm-grey ms-1">*</span></label>
+                                    <input type="text" class="form-control" id="phone-number">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="message" class="form-label text-warm-grey small">Message<span class="text-warm-grey ms-1">*</span></label>
+                                    <textarea class="form-control" id="message" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer text-white">
     <div class="wrapper">
         <div class="main-container py-5">
             <div class="row text-center text-md-center">

@@ -1,0 +1,16 @@
+.contact-details{
+  padding: 110px 0;
+  .icon{
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.map-section{
+  margin-top: 210px;
+  .map-wrapper{
+    iframe{
+      margin-top: -210px;
+    }
+  }
+}
