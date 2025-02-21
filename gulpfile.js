@@ -53,7 +53,7 @@ function html() {
   return gulp.src(paths.html.src)
       .pipe(fileinclude({
         prefix: '@@',
-        basepath: '@file'
+        basepath: '@file',
       }))
       .pipe(gulp.dest(paths.html.dest))
       .pipe(bs.stream());
