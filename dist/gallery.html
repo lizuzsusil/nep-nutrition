@@ -15,7 +15,7 @@
     <script src="../assets/js/nepNutrition.min.js" async></script>
 </head>
 <body>
-    <nav class="header">
+<nav class="header">
     <div class="wrapper-fluid">
         <div class="header-container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="/">
@@ -35,11 +35,64 @@
         </div>
     </div>
 </nav>
-    <main>
-        <h1>Welcome!</h1>
-        testasdfasdf
-    </main>
-    <footer class="footer text-white">
+<section class="pageBanner position-relative" id="pageBanner">
+    <div class="image-wrapper">
+        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid">
+    </div>
+    <div class="content-wrapper text-center position-absolute">
+        <p class="text-white mb-4">Gallery</p>
+        <h1 class="text-white mb-4">Our Showcase</h1>
+        <h4 class="text-dusty-grey fw-normal">Explore our showcase of successful solutions.</h4>
+    </div>
+</section>
+<main>
+    <section class="wrapper mt-5">
+        <div class="row gallery">
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/castle.jpg" data-caption="Castle on a Hill">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/castle.jpg" alt="Castle on a Hill">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sofa_cat.jpg" data-caption="Sofa Cat">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sofa_cat.jpg" alt="Sofa Cat">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/car_lady_dog.jpg" data-caption="Lady and Dog">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,c_scale,q_auto/car_lady_dog.jpg" alt="Lady and Dog">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/cld_popsicles.jpg" data-caption="Popsicles">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/cld_popsicles.jpg" alt="Popsicles">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sheep.jpg" data-caption="Sheep">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sheep.jpg" alt="Sheep">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/dog.jpg" data-caption="Cute Puppy">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/dog.jpg" alt="Cute Puppy">
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/kitten.jpg" data-caption="Cute Kitten">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/kitten.jpg" alt="Cute Kitten">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer text-white">
     <div class="wrapper">
         <div class="main-container py-5">
             <div class="row text-center text-md-center">
@@ -157,5 +210,18 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: { autoStart: true },
+            Toolbar: { display: ['zoom', 'close','fullscreen'] },
+            caption: function (fancybox, carousel, slide) {
+                return slide.caption || "";
+            }
+        });
+    });
+</script>
 </body>
 </html>
