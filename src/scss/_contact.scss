@@ -62,10 +62,11 @@
 
 //Teams Section
 .team-card {
-  img{
+  img {
     object-fit: cover;
   }
-  .info{
+
+  .info {
     background-color: rgba(80, 80, 80, 0.70);
     position: absolute;
     bottom: 20px;
@@ -73,13 +74,28 @@
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(6px);
+
+    h4 {
+      font-size: 1rem;
+      @media all and (min-width: 992px) {
+        font-size: calc(1.275rem + .3vw);
+      }
+
+      & + p {
+        font-size: 12px;
+        @media all and (min-width: 992px) {
+          font-size: .875em;
+        }
+      }
+    }
   }
 }
 
 //CTA
-.cta-section{
+.cta-section {
   position: relative;
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     background-image: url("../assets/images/cta_bg.png");
@@ -92,7 +108,8 @@
     bottom: -35px;
     pointer-events: none;
   }
-  .title{
+
+  .title {
     width: 100%;
     @media all and (min-width: 992px) {
       width: 75%;

@@ -1854,10 +1854,10 @@ progress {
   width: 100%;
   margin-bottom: 1rem;
   vertical-align: top;
-  border-color: var(--npn-table-border-color);
+  border-color: #303030;
 }
 .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  padding: 0.75rem 0.75rem;
   color: var(--npn-table-color-state, var(--npn-table-color-type, var(--npn-table-color)));
   background-color: var(--npn-table-bg);
   border-bottom-width: var(--npn-border-width);
