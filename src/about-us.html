@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/head.html')
+<body>
+@@include('components/header.html')
+@@include('components/pageBanner.html', { "page": "About Us", "title": "Discover Our Story", "desc": "Learn who we are and what drives us" })
+<main>
+    <section class="my-5 about-us">
+        <div class="wrapper">
+            <h3 class="text-center text-white fw-bold mb-5">WE ARE A MISSION DRIVEN COMPANY</h3>
+            <div class="row">
+                <div class="col-md-6 text-center mb-4">
+                    <svg viewBox="0 0 90 90" class="about-us-svg">
+                        <use href="../assets/images/icons.svg#icon-goals"></use>
+                    </svg>
+                    <h4 class="text-white fw-medium mb-4 position-relative underscored">Goals</h4>
+                    <p class="text-white mb-3 lh-base fw-light desc pt-2">To become the most trusted global leader in
+                        sports nutrition by
+                        revolutionizing the supplement industry through innovation, quality, and integrity. We aspire to
+                        create a world where every athlete has access to safe, effective, and premium-grade supplements
+                        that truly deliver results.</p>
+                </div>
+                <div class="col-md-6 text-center mb-4">
+                    <svg viewBox="0 0 90 90" class="about-us-svg">
+                        <use href="../assets/images/icons.svg#icon-values"></use>
+                    </svg>
+                    <h4 class="text-white fw-medium mb-4 position-relative underscored">Values</h4>
+                    <p class="text-white mb-3 lh-base fw-light desc pt-2">To become the most trusted global leader in
+                        sports nutrition by
+                        revolutionizing the supplement industry through innovation, quality, and integrity. We aspire to
+                        create a world where every athlete has access to safe, effective, and premium-grade supplements
+                        that truly deliver results.</p>
+                </div>
+                <div class="col-md-6 text-center mb-4">
+                    <svg viewBox="0 0 90 90" class="about-us-svg">
+                        <use href="../assets/images/icons.svg#icon-mission"></use>
+                    </svg>
+                    <h4 class="text-white fw-medium mb-4 position-relative underscored">Mission</h4>
+                    <p class="text-white mb-3 lh-base fw-light desc pt-2">To become the most trusted global leader in
+                        sports nutrition by
+                        revolutionizing the supplement industry through innovation, quality, and integrity. We aspire to
+                        create a world where every athlete has access to safe, effective, and premium-grade supplements
+                        that truly deliver results.</p>
+                </div>
+                <div class="col-md-6 text-center mb-4">
+                    <svg viewBox="0 0 90 90" class="about-us-svg">
+                        <use href="../assets/images/icons.svg#icon-vision"></use>
+                    </svg>
+                    <h4 class="text-white fw-medium mb-4 position-relative underscored">Vision</h4>
+                    <p class="text-white mb-3 lh-base fw-light desc pt-2">To become the most trusted global leader in
+                        sports nutrition by
+                        revolutionizing the supplement industry through innovation, quality, and integrity. We aspire to
+                        create a world where every athlete has access to safe, effective, and premium-grade supplements
+                        that truly deliver results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="teams-section bg-young-night">
+        <div class="wrapper">
+            <h2 class="text-white text-center py-5 mb-0 fw-bold">OUR TEAM</h2>
+            <div class="row pb-5 justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                    @@include('components/teamCard.html', {
+                    "name": "Catellus Hilarius",
+                    "designation": "Founder",
+                    })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                    @@include('components/teamCard.html', {
+                    "name": "Catellus Hilarius",
+                    "designation": "Manager",
+                    })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                    @@include('components/teamCard.html', {
+                    "name": "Catellus Hilarius",
+                    "designation": "Marketing Head",
+                    })
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                    @@include('components/teamCard.html', {
+                    "name": "Catellus Hilarius",
+                    "designation": "Secretary",
+                    })
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="story-section my-5">
+        <div class="wrapper">
+            <h2 class="text-white text-center pb-5 mb-0 fw-bold">OUR STORY</h2>
+            <p class="text-white lh-base mb-0 fw-light">
+                To become the most trusted global leader in sports nutrition by revolutionizing the supplement industry
+                through innovation, quality, and integrity. We aspire to create a world where every athlete has access
+                to safe, effective, and premium-grade supplements that truly deliver results.To become the most trusted
+                global leader in sports nutrition by revolutionizing the supplement industry through innovation,
+                quality, and integrity. We aspire to create a world where every athlete has access to safe, effective,
+                and premium-grade supplements that truly deliver results.To become the most trusted global leader in
+                sports nutrition by revolutionizing the supplement industry through innovation, quality, and integrity.
+                We aspire to create a world where every athlete has access to safe, effective, and premium-grade
+                supplements that truly deliver results.To become the most trusted global leader in sports nutrition by
+                revolutionizing the supplement industry through innovation, quality, and integrity. We aspire to create
+                a world where every athlete has access to safe, effective, and premium-grade supplements that truly
+                deliver results.
+            </p>
+        </div>
+    </section>
+    <section class="cta-section py-5 bg-thunder-black overflow-hidden">
+        <div class="wrapper">
+            <div class="row align-items-center my-5">
+                <div class="col-md-6 col-12 text-md-start text-center mb-md-0 mb-5">
+                    <h1 class="text-white fw-bold mb-4 title">Find Your Perfect Supplement</h1>
+                    <h4 class="text-white fw-normal mb-0">Expert-curated recommendations just for you</h4>
+                </div>
+                <div class="col-md-6 col-12 text-md-end text-center">
+                    @@include('components/button.html', { "btnText": "Start My Journey", "variant": "burnt-yellow", "buttonClass": "" })
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('components/footer.html')
+</body>
+</html>
