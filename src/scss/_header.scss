@@ -118,20 +118,33 @@ table,
 .table {
   font-weight: normal;
   font-size: 14px;
+
   th {
     background-color: #232323;
     color: white;
     font-weight: normal;
   }
-  td{
+
+  td {
     background-color: transparent;
     color: white;
   }
-  tr{
+
+  tr {
     background-color: #000;
     transition: ease-in-out all 0.3s;
-    &:hover{
+
+    &:hover {
       background-color: #1a1a1a;
     }
+  }
+}
+
+//npn select
+
+.npn-select {
+  width: 150px;
+  option{
+    background-color: #121212;
   }
 }
