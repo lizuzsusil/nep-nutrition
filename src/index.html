@@ -2,11 +2,149 @@
 <html lang="en">
 @@include('components/head.html')
 <body>
-    @@include('components/header.html')
-    <main>
-        <h1>Welcome!</h1>
-        testasdfasdf
-    </main>
-    @@include('components/footer.html')
+@@include('components/header.html')
+<main>
+    <h1>Welcome!</h1>
+    <section class="bg-young-night">
+        <div class="wrapper py-5">
+            <h2 class="text-white fw-bold mb-6 text-center">WHY CHOOSE NEP NUTRITION?</h2>
+            <div class="row">
+                <div class="col-md-4 col-12 text-center">
+                    <svg viewBox="0 0 62 80" width="62" class="mb-5">
+                        <use href="../assets/images/icons.svg#icon-love"></use>
+                    </svg>
+                    <h3 class="text-white text-center">High Quality Product</h3>
+                    <p class="text-white text-center">We have option to pickup in store</p>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <svg viewBox="0 0 62 80" width="62" class="mb-5">
+                        <use href="../assets/images/icons.svg#icon-love"></use>
+                    </svg>
+                    <h3 class="text-white text-center">High Quality Product</h3>
+                    <p class="text-white text-center">We have option to pickup in store</p>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <svg viewBox="0 0 62 80" width="62" class="mb-5">
+                        <use href="../assets/images/icons.svg#icon-love"></use>
+                    </svg>
+                    <h3 class="text-white text-center">High Quality Product</h3>
+                    <p class="text-white text-center">We have option to pickup in store</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="latest-products">
+        <div class="wrapper">
+            <div class="title-section mb-5 d-flex justify-content-between align-items-center">
+                <h2 class="text-white fw-bold d-inline-block">Latest Products</h2>
+                <a href="#" class="text-white">Explore</a>
+            </div>
+            <div class="latest-product-slider">
+                @@include('components/latestProduct.html')
+                @@include('components/latestProduct.html')
+                @@include('components/latestProduct.html')
+                @@include('components/latestProduct.html')
+                @@include('components/latestProduct.html')
+                @@include('components/latestProduct.html')
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2 class="text-white text-center fw-bold mb-5">WHAT OUR CLIENTS SAY ABOUT US</h2>
+        <div class="testimonial-slider">
+            @@include('components/testimonialCard.html')
+            @@include('components/testimonialCard.html')
+            @@include('components/testimonialCard.html')
+            @@include('components/testimonialCard.html')
+            @@include('components/testimonialCard.html')
+            @@include('components/testimonialCard.html')
+        </div>
+    </section>
+    <section class="cta-section py-5 bg-thunder-black overflow-hidden">
+        <div class="wrapper">
+            <div class="row align-items-center my-5">
+                <div class="col-md-6 col-12 text-md-start text-center mb-md-0 mb-5">
+                    <h1 class="text-white fw-bold mb-4 title">Find Your Perfect Supplement</h1>
+                    <h4 class="text-white fw-normal mb-0">Expert-curated recommendations just for you</h4>
+                    @@include('components/button.html', { "btnText": "Start My Journey", "variant": "burnt-yellow",
+                    "buttonClass": "mt-5" })
+                </div>
+                <div class="col-md-6 col-12 text-center">
+                    <img src="./assets/images/cta_image.png" alt="cta_image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('components/footer.html')
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('.latest-product-slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ]
+    });
+
+    $('.testimonial-slider').slick({
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '28vw',
+        infinite: true,
+        autoplay: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1441,
+                settings: {
+                    centerPadding: '20vw',
+                }
+            },
+            {
+                breakpoint: 1367,
+                settings: {
+                    centerPadding: '18vw',
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    dots: true
+                }
+            },
+        ]
+    });
+</script>
 </body>
 </html>
