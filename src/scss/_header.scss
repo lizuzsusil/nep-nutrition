@@ -3,7 +3,10 @@
   padding: 10px;
 
   &-container {
-    margin: 0 2.5rem;
+    margin: 0;
+    @media all and (min-width: 768px) {
+      margin: 0 2.5rem;
+    }
   }
 
   .menu-wrapper {
@@ -19,6 +22,46 @@
           color: var(--npn-burnt-yellow);
         }
       }
+    }
+  }
+
+  .mobile-nav {
+    .navbar-toggler {
+      svg {
+        transition: ease-in 0.1s all;
+        filter: brightness(80%);
+
+        &:hover {
+          filter: brightness(100%);
+        }
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        transition: ease-in 0.1s all;
+        .nav-link,
+        svg {
+          filter: invert(80%);
+        }
+        &:hover {
+          .nav-link,
+          svg {
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+    .mobile-search {
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      padding: .375rem .75rem;
+      &::placeholder{
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .offcanvas-header{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
 }
@@ -144,7 +187,8 @@ table,
 
 .npn-select {
   width: 150px;
-  option{
+
+  option {
     background-color: #121212;
   }
 }

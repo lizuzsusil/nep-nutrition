@@ -23,16 +23,73 @@
             <a class="navbar-brand" href="/">
                 <img src="../assets/images/logo.jpg" alt="NepNutrition" class="img-fluid" width="55">
             </a>
-            <div class="menu-wrapper">
+            <div class="menu-wrapper d-md-block d-none">
                 <ul class="navbar mb-0 list-unstyled">
                     <li><a href="/" class="nav-item active">HOME</a></li>
-                    <li><a href="/products" class="nav-item">PRODUCTS</a></li>
-                    <li><a href="/news" class="nav-item">NEWS</a></li>
-                    <li><a href="/about-us" class="nav-item">ABOUT US</a></li>
+                    <li><a href="/products.html" class="nav-item">PRODUCTS</a></li>
+                    <li><a href="/contact-us.html" class="nav-item">CONTACT US</a></li>
+                    <li><a href="/about-us.html" class="nav-item">ABOUT US</a></li>
+                    <li><a href="/gallery.html" class="nav-item">GALLERY</a></li>
                 </ul>
             </div>
-            <div class="search">
+            <div class="search d-md-block d-none">
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
+            </div>
+
+
+            <!--Mobile Navigation Section-->
+            <div class="mobile-nav d-md-none d-block">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                    <svg height="19" width="25">
+                        <use href="../assets/images/icons.svg#icon-hamburger"></use>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-end bg-smoky-black" tabindex="-1" id="offcanvasDarkNavbar"
+                     aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="/">
+                            <img src="../assets/images/logo.jpg" alt="NepNutrition" class="img-fluid" width="55">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="position-relative" role="search">
+                            <input class="form-control mobile-search" type="search" placeholder="Search..." aria-label="Search">
+                        </form>
+                        <hr class="border-0"/>
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item d-flex gap-2 align-items-center">
+                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                    <use href="../assets/images/icons.svg#icon-next"></use>
+                                </svg>
+                                <a class="nav-link active" aria-current="page" href="/">HOME</a>
+                            </li>
+                            <li class="nav-item d-flex gap-2 align-items-center">
+                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                    <use href="../assets/images/icons.svg#icon-next"></use>
+                                </svg>
+                                <a href="/products.html" class="nav-link">PRODUCTS</a></li>
+                            <li class="nav-item d-flex gap-2 align-items-center">
+                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                    <use href="../assets/images/icons.svg#icon-next"></use>
+                                </svg>
+                                <a href="/contact-us.html" class="nav-link">CONTACT US</a></li>
+                            <li class="nav-item d-flex gap-2 align-items-center">
+                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                    <use href="../assets/images/icons.svg#icon-next"></use>
+                                </svg>
+                                <a href="/about-us.html" class="nav-link">ABOUT US</a></li>
+                            <li class="nav-item d-flex gap-2 align-items-center">
+                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                    <use href="../assets/images/icons.svg#icon-next"></use>
+                                </svg>
+                                <a href="/gallery.html" class="nav-link">GALLERY</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +132,7 @@
         </div>
     </div>
     <div class="hover-content text-center w-100">
-        <a class="btn btn-burnt-yellow" href="#">View Product</a>
+        <a class="btn btn-burnt-yellow" href="/product-detail.html">View Product</a>
     </div>
 </div>
 
@@ -93,7 +150,7 @@
         </div>
     </div>
     <div class="hover-content text-center w-100">
-        <a class="btn btn-burnt-yellow" href="#">View Product</a>
+        <a class="btn btn-burnt-yellow" href="/product-detail.html">View Product</a>
     </div>
 </div>
 
@@ -111,7 +168,7 @@
         </div>
     </div>
     <div class="hover-content text-center w-100">
-        <a class="btn btn-burnt-yellow" href="#">View Product</a>
+        <a class="btn btn-burnt-yellow" href="/product-detail.html">View Product</a>
     </div>
 </div>
 
@@ -129,7 +186,7 @@
         </div>
     </div>
     <div class="hover-content text-center w-100">
-        <a class="btn btn-burnt-yellow" href="#">View Product</a>
+        <a class="btn btn-burnt-yellow" href="/product-detail.html">View Product</a>
     </div>
 </div>
 
