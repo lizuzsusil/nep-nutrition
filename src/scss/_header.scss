@@ -7,6 +7,12 @@
     @media all and (min-width: 768px) {
       margin: 0 2.5rem;
     }
+    .navbar-brand{
+      width: 45px;
+      @media all and (min-width: 768px){
+        width: 55px;
+      }
+    }
   }
 
   .menu-wrapper {
