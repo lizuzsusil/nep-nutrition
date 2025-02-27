@@ -32,6 +32,7 @@
     height: 60px;
     width: 60px;
     margin-bottom: 24px;
+
     @media all and (min-width: 992px) {
       height: 90px;
       width: 90px;
@@ -54,6 +55,7 @@
   .desc {
     width: 100%;
     margin: 0 auto;
+
     @media all and (min-width: 992px) {
       width: 75%;
     }
@@ -78,12 +80,14 @@
     h4 {
       font-size: 1rem;
       word-break: break-all;
+
       @media all and (min-width: 992px) {
         font-size: calc(1.275rem + .3vw);
       }
 
-      & + p {
+      &+p {
         font-size: 12px;
+
         @media all and (min-width: 992px) {
           font-size: .875em;
         }
@@ -103,7 +107,7 @@
     background-image: url("../assets/images/cta_bg.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top right;
+    background-position: bottom right;
     height: 100%;
     width: 100%;
     right: 0;
@@ -114,6 +118,7 @@
 
   .title {
     width: 100%;
+
     @media all and (min-width: 992px) {
       width: 75%;
     }
@@ -145,6 +150,7 @@
   background-color: #000000;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
   @media all and (min-width: 1024px) {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -152,30 +158,32 @@
 }
 
 .product-card {
-  background: #dfa100;
-  background: linear-gradient(90deg, rgba(223, 161, 0, 1) 69%, rgba(255, 255, 255, 0) 69%);
-  margin: 0 10px;
+  &.home {
+    background: #dfa100;
+    background: linear-gradient(90deg, rgba(223, 161, 0, 1) 69%, rgba(255, 255, 255, 0) 69%);
+    margin: 0 10px;
 
-  .product {
-    &-info {
-      position: relative;
-      background-color: rgba(72, 72, 72, 0.8);
-      backdrop-filter: blur(5px);
-      padding: 30px 20px 30px 70px;
+    .product {
+      &-info {
+        position: relative;
+        background-color: rgba(72, 72, 72, 0.8);
+        backdrop-filter: blur(5px);
+        padding: 30px 20px 30px 70px;
 
-      &-wrapper {
-        margin: 20px 0;
-        width: 70%;
+        &-wrapper {
+          margin: 20px 0;
+          width: 70%;
+        }
       }
-    }
 
-    &-image {
-      position: absolute;
-      left: -48px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 150px;
-      filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.3));
+      &-image {
+        position: absolute;
+        left: -48px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 150px;
+        filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.3));
+      }
     }
   }
 }
@@ -228,6 +236,7 @@
   &s {
     padding-top: 3rem;
     padding-bottom: 3rem;
+
     @media all and (min-width: 1024px) {
       padding-top: 6rem;
       padding-bottom: 6rem;
@@ -235,8 +244,10 @@
   }
 
   margin: 0 65px;
+
   @media all and (max-width: 475px) {
-    margin: 0 20px;;
+    margin: 0 20px;
+    ;
   }
 
   &-slider {
@@ -269,9 +280,11 @@
 
   .img-wrapper {
     margin: 0 auto 40px auto;
+
     @media all and (min-width: 576px) {
       margin: 0 50px 30px 0;
     }
+
     z-index: 1;
 
     .img {
@@ -279,6 +292,7 @@
       width: 165px;
       overflow: hidden;
       border-radius: 35px 0 35px 35px;
+
       @media all and (max-width: 576px) {
         height: 124px;
         width: 124px;
