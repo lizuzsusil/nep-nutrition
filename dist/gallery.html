@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/@@css">
 </head>
 <body>
-<nav class="header sticky-top">
+<nav class="header sticky-top inner">
     <div class="wrapper-fluid">
         <div class="header-container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="/">
@@ -32,8 +32,25 @@
                     <li><a href="/gallery.html" class="nav-item">GALLERY</a></li>
                 </ul>
             </div>
-            <div class="search d-md-block d-none">
+            <div class="search cursor-pointer" data-bs-target="#searchModal" data-bs-toggle="modal">
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
+            </div>
+
+            <!--Search Modal-->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true" aria-labelledby="searchModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center">
+                            <div class="search-box text-center">
+                                <h2 class="text-white mb-3">Search</h2>
+                                <input type="search" class="form-control form-control-lg" placeholder="Search NepNutrition...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -94,11 +111,11 @@
         </div>
     </div>
 </nav>
-<section class="pageBanner position-relative d-flex align-items-center" id="pageBanner">
-    <div class="image-wrapper">
-        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid">
+<section class="pageBanner position-relative d-flex align-items-center w-100 justify-content-center align-items-center overflow-hidden" id="pageBanner">
+    <div class="image-wrapper position-absolute h-100 w-100">
+        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid object-fit-cover w-100 h-100">
     </div>
-    <div class="content-wrapper text-center text-white">
+    <div class="content-wrapper text-center text-white position-relative z-2">
         <p class="mb-3 fs-5">Gallery</p>
         <h1 class="mb-3 display-4 fw-bold">Our Showcase</h1>
         <h4 class="text-dusty-grey fw-normal fs-5">Explore our showcase of successful solutions.</h4>
@@ -108,45 +125,66 @@
 <main>
     <section class="wrapper mt-5">
         <div class="row gallery">
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/castle.jpg" data-caption="Castle on a Hill">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/castle.jpg" alt="Castle on a Hill">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/castle.jpg"
+                   data-caption="Castle on a Hill">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/castle.jpg"
+                         alt="Castle on a Hill">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sofa_cat.jpg" data-caption="Sofa Cat">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sofa_cat.jpg" alt="Sofa Cat">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sofa_cat.jpg"
+                   data-caption="Sofa Cat">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sofa_cat.jpg"
+                         alt="Sofa Cat">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/car_lady_dog.jpg" data-caption="Lady and Dog">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,c_scale,q_auto/car_lady_dog.jpg" alt="Lady and Dog">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/car_lady_dog.jpg"
+                   data-caption="Lady and Dog">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,c_scale,q_auto/car_lady_dog.jpg"
+                         alt="Lady and Dog">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/cld_popsicles.jpg" data-caption="Popsicles">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/cld_popsicles.jpg" alt="Popsicles">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/cld_popsicles.jpg"
+                   data-caption="Popsicles">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/cld_popsicles.jpg"
+                         alt="Popsicles">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sheep.jpg" data-caption="Sheep">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sheep.jpg" alt="Sheep">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sheep.jpg"
+                   data-caption="Sheep">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sheep.jpg"
+                         alt="Sheep">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/dog.jpg" data-caption="Cute Puppy">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/dog.jpg" alt="Cute Puppy">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/dog.jpg"
+                   data-caption="Cute Puppy">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/dog.jpg"
+                         alt="Cute Puppy">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/kitten.jpg" data-caption="Cute Kitten">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/kitten.jpg" alt="Cute Kitten">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/kitten.jpg"
+                   data-caption="Cute Kitten">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/kitten.jpg"
+                         alt="Cute Kitten">
                 </a>
             </div>
         </div>
@@ -275,8 +313,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         Fancybox.bind("[data-fancybox='gallery']", {
-            Thumbs: { autoStart: true },
-            Toolbar: { display: ['zoom', 'close','fullscreen'] },
+            Thumbs: {autoStart: true},
+            Toolbar: {display: ['zoom', 'close', 'fullscreen']},
             caption: function (fancybox, carousel, slide) {
                 return slide.caption || "";
             }

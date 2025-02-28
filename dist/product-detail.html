@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/product-detail.css">
 </head>
 <body>
-<nav class="header sticky-top">
+<nav class="header sticky-top inner">
     <div class="wrapper-fluid">
         <div class="header-container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="/">
@@ -32,8 +32,25 @@
                     <li><a href="/gallery.html" class="nav-item">GALLERY</a></li>
                 </ul>
             </div>
-            <div class="search d-md-block d-none">
+            <div class="search cursor-pointer" data-bs-target="#searchModal" data-bs-toggle="modal">
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
+            </div>
+
+            <!--Search Modal-->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true" aria-labelledby="searchModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center">
+                            <div class="search-box text-center">
+                                <h2 class="text-white mb-3">Search</h2>
+                                <input type="search" class="form-control form-control-lg" placeholder="Search NepNutrition...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -94,11 +111,11 @@
         </div>
     </div>
 </nav>
-<section class="pageBanner position-relative d-flex align-items-center" id="pageBanner">
-    <div class="image-wrapper">
-        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid">
+<section class="pageBanner position-relative d-flex align-items-center w-100 justify-content-center align-items-center overflow-hidden" id="pageBanner">
+    <div class="image-wrapper position-absolute h-100 w-100">
+        <img src="../assets/images/pageBannerImage.png" alt="page banner image" class="img-fluid object-fit-cover w-100 h-100">
     </div>
-    <div class="content-wrapper text-center text-white">
+    <div class="content-wrapper text-center text-white position-relative z-2">
         <p class="mb-3 fs-5">Product</p>
         <h1 class="mb-3 display-4 fw-bold">LevroMono 300 g</h1>
         <h4 class="text-dusty-grey fw-normal fs-5">Kevin Levrone Signature Series</h4>

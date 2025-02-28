@@ -2,7 +2,7 @@
 <html lang="en">
 @@include('components/head.html')
 <body>
-@@include('components/header.html')
+@@include('components/header.html', {"extraClass": "inner"})
 @@include('components/pageBanner.html', {
 "page": "Gallery",
 "title": "Our Showcase",
@@ -11,45 +11,66 @@
 <main>
     <section class="wrapper mt-5">
         <div class="row gallery">
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/castle.jpg" data-caption="Castle on a Hill">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/castle.jpg" alt="Castle on a Hill">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/castle.jpg"
+                   data-caption="Castle on a Hill">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/castle.jpg"
+                         alt="Castle on a Hill">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sofa_cat.jpg" data-caption="Sofa Cat">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sofa_cat.jpg" alt="Sofa Cat">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sofa_cat.jpg"
+                   data-caption="Sofa Cat">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sofa_cat.jpg"
+                         alt="Sofa Cat">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/car_lady_dog.jpg" data-caption="Lady and Dog">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,c_scale,q_auto/car_lady_dog.jpg" alt="Lady and Dog">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/car_lady_dog.jpg"
+                   data-caption="Lady and Dog">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,c_scale,q_auto/car_lady_dog.jpg"
+                         alt="Lady and Dog">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/cld_popsicles.jpg" data-caption="Popsicles">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/cld_popsicles.jpg" alt="Popsicles">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/cld_popsicles.jpg"
+                   data-caption="Popsicles">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/cld_popsicles.jpg"
+                         alt="Popsicles">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sheep.jpg" data-caption="Sheep">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sheep.jpg" alt="Sheep">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/sheep.jpg"
+                   data-caption="Sheep">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/sheep.jpg"
+                         alt="Sheep">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/dog.jpg" data-caption="Cute Puppy">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/dog.jpg" alt="Cute Puppy">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/dog.jpg"
+                   data-caption="Cute Puppy">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/dog.jpg"
+                         alt="Cute Puppy">
                 </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4 text-center">
-                <a data-fancybox="gallery" data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/kitten.jpg" data-caption="Cute Kitten">
-                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/kitten.jpg" alt="Cute Kitten">
+            <div class="col-md-3 col-sm-4 col-6 mb-4 text-center">
+                <a data-fancybox="gallery"
+                   data-src="https://res.cloudinary.com/demo/image/upload/w_1000,c_scale,q_auto/kitten.jpg"
+                   data-caption="Cute Kitten">
+                    <img src="https://res.cloudinary.com/demo/image/upload/w_200,h_155,c_lfill,q_auto/kitten.jpg"
+                         alt="Cute Kitten">
                 </a>
             </div>
         </div>
@@ -61,8 +82,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         Fancybox.bind("[data-fancybox='gallery']", {
-            Thumbs: { autoStart: true },
-            Toolbar: { display: ['zoom', 'close','fullscreen'] },
+            Thumbs: {autoStart: true},
+            Toolbar: {display: ['zoom', 'close', 'fullscreen']},
             caption: function (fancybox, carousel, slide) {
                 return slide.caption || "";
             }

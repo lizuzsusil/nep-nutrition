@@ -1,15 +1,23 @@
 .header {
-  background-color: var(--npn-young-night);
   padding: 10px;
+
+  &.inner {
+    background-color: var(--npn-young-night);
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
 
   &-container {
     margin: 0;
     @media all and (min-width: 768px) {
       margin: 0 2.5rem;
     }
-    .navbar-brand{
+
+    .navbar-brand {
       width: 45px;
-      @media all and (min-width: 768px){
+      @media all and (min-width: 768px) {
         width: 55px;
       }
     }
@@ -17,15 +25,42 @@
 
   .menu-wrapper {
     .navbar {
-      gap: 3.5rem;
+      gap: 2.5rem;
+      font-size: 12px;
+      @media all and (min-width: 992px) {
+        gap: 3.5rem;
+        font-size: 14px;
+      }
 
       .nav-item {
         color: #ffffff;
         text-decoration: none;
         font-weight: 600;
+        transition: color 0.3s ease-in-out;
+        position: relative;
 
         &.active {
-          color: var(--npn-burnt-yellow);
+          color: var(--npn-apple-green);
+        }
+
+        &:hover {
+          color: var(--npn-apple-green);
+
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -3px;
+          width: 0;
+          height: 2px;
+          background-color: var(--npn-apple-green);
+          transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
         }
       }
     }
@@ -46,10 +81,12 @@
     .navbar-nav {
       .nav-item {
         transition: ease-in 0.1s all;
+
         .nav-link,
         svg {
           filter: invert(80%);
         }
+
         &:hover {
           .nav-link,
           svg {
@@ -58,15 +95,17 @@
         }
       }
     }
+
     .mobile-search {
       border: 1px solid rgba(255, 255, 255, 0.8);
       padding: .375rem .75rem;
-      &::placeholder{
+
+      &::placeholder {
         color: rgba(255, 255, 255, 0.8);
       }
     }
 
-    .offcanvas-header{
+    .offcanvas-header {
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
@@ -196,5 +235,46 @@ table,
 
   option {
     background-color: #121212;
+  }
+}
+
+.modal-backdrop.show {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  opacity: 1;
+}
+
+#searchModal {
+  .modal-content {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    .search-box {
+      width: 100%;
+      @media all and (min-width: 576px) {
+        width: 80%;
+      }
+      @media all and (min-width: 992px) {
+        width: 75%;
+      }
+      @media all and (min-width: 1200px) {
+        width: 40%;
+      }
+
+      .form-control-lg {
+        background: rgba(var(--npn-smoky-black-rgb), 0.8);
+        border: none;
+        padding: 15px;
+
+        &::placeholder {
+          color: rgba(var(--npn-white-rgb), 0.6);
+        }
+      }
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
   }
 }

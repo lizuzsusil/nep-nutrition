@@ -8,6 +8,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import sourcemaps from 'gulp-sourcemaps';
 import fs from 'fs-extra';
+import gulpPurgeCSS from "gulp-purgecss";
 
 const sass = gulpSass(dartSass);
 const bs = browserSync.create();
@@ -17,6 +18,10 @@ const paths = {
   scss: {
     src: 'src/scss/**/*.scss',
     dest: 'dist/css'
+  },
+  purgeSrc: {
+    css: 'dist/css/**/*.css',
+    html: 'dist/**/*.html',
   },
   html: {
     src: ['src/**/*.html', '!src/components/**'],
@@ -42,8 +47,8 @@ function styles() {
       .pipe(sourcemaps.init()) // Initialize sourcemaps
       .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
       .pipe(autoprefixer())
-      .pipe(cleanCSS())
-      .pipe(sourcemaps.write('.')) // Write sourcemaps
+      // .pipe(cleanCSS())
+      // .pipe(sourcemaps.write('.')) // Write sourcemaps
       .pipe(gulp.dest(paths.scss.dest))
       .pipe(bs.stream());
 }
@@ -81,6 +86,21 @@ function watch() {
   gulp.watch(paths.assets.src, assets);
 }
 
+// Purge unused CSS
+function purgeCSS() {
+  return gulp.src(paths.purgeSrc.css)
+      .pipe(gulpPurgeCSS({
+        content: [paths.purgeSrc.html],
+        safelist: {
+          standard: [/^is-/, /^has-/],
+          deep: [/^show/, /^col/],
+        }
+      }))
+      // .pipe(cleanCSS())
+      // .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(paths.scss.dest));
+}
+
 // Define complex tasks
 const build = gulp.series(clean, gulp.parallel(styles, html, assets));
 const dev = gulp.series(build, watch);
@@ -91,6 +111,7 @@ export {
   styles,
   html,
   assets,
+  // purgeCSS,
   build,
   dev
 };
