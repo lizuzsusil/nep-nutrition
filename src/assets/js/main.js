@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const banner = document.querySelector(".header.is-index");
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY < 60) {
-            banner.classList.add("transparent");
+        if (window.scrollY > 60) {
+            banner.classList.add("bg-young-night", "shadow");
         } else {
-            banner.classList.remove("transparent");
+            banner.classList.remove("bg-young-night", "shadow");
         }
     });
 

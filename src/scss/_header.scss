@@ -1,14 +1,6 @@
 .header {
   padding: 10px;
 
-  &.inner {
-    background-color: var(--npn-young-night);
-  }
-
-  &.transparent {
-    background-color: transparent;
-  }
-
   &-container {
     margin: 0;
     @media all and (min-width: 768px) {
@@ -186,20 +178,13 @@
   }
 
   .copyright {
-    padding: 1.5rem 0 2.3rem 0;
-    border-top: 1px solid rgba(var(--npn-white-rgb), 0.25);
-
-    .section {
-      &-left {
-        opacity: 0.7;
-      }
+    padding: 1rem 0;
+    @media all and (min-width: 992px) {
+      padding: 1.5rem 0 2.3rem 0;
     }
+    border-top: 1px solid rgba(var(--npn-white-rgb), 0.25);
+    opacity: 0.7;
   }
-}
-
-.sprite-icon {
-  width: 1rem;
-  max-height: 1.3rem;
 }
 
 table,

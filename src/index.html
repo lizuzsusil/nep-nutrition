@@ -40,32 +40,29 @@
             </div>
         </div>
         <div class="banner-footer position-relative">
-            <div class="wrapper-fluid d-flex align-items-center justify-content-center px-5 justify-content-sm-between">
-                <div class="slide-counter">
-                    asdf
-                </div>
-                <div class="socials d-flex align-items-center">
+            <div class="wrapper-fluid d-flex align-items-center justify-content-center px-5 justify-content-sm-end">
+                <div class="socials d-flex flex-sm-row flex-column align-items-center">
                     <p class="mb-0 position-relative">
                         <span class="text-white">SOCIALS</span>
                     </p>
-                    <ul class="list-unstyled d-flex align-items-center mb-0 gap-3 ms-5 ps-3">
+                    <ul class="list-unstyled d-flex align-items-center mb-0 gap-3">
                         <li>
-                            <a href="">
-                                <svg height="16" width="16">
+                            <a href="" aria-label="facebook" title="Facebook">
+                                <svg height="20" width="20">
                                     <use href="../assets/images/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <svg height="16" width="16">
+                            <a href="" aria-label="instagram" title="Instagram">
+                                <svg height="20" width="20">
                                     <use href="../assets/images/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <svg height="16" width="16">
+                            <a href="" aria-label="email" title="Email">
+                                <svg height="20" width="20">
                                     <use href="../assets/images/icons.svg#icon-email"></use>
                                 </svg>
                             </a>
@@ -107,7 +104,9 @@
         <div class="wrapper">
             <div class="title-section mb-5 d-flex justify-content-between align-items-center flex-md-row flex-column">
                 <h2 class="text-white fw-bold d-inline-block">Latest Products</h2>
-                <a href="#" class="text-white">Explore</a>
+                <a href="#" class="text-white text-decoration-none">Explore <svg width="16" height="16">
+                    <use href="../assets/images/icons.svg#icon-next"></use>
+                </svg></a>
             </div>
             <div class="latest-product-slider">
                 @@include('components/latestProduct.html')

@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>NepNutrition</title>
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
@@ -17,7 +16,7 @@
     <link rel="stylesheet" href="css/@@css">
 </head>
 <body>
-<nav class="header sticky-top inner">
+<nav class="header sticky-top bg-young-night shadow">
     <div class="wrapper-fluid">
         <div class="header-container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="/">
@@ -32,8 +31,10 @@
                     <li><a href="/gallery.html" class="nav-item">GALLERY</a></li>
                 </ul>
             </div>
-            <div class="search cursor-pointer" data-bs-target="#searchModal" data-bs-toggle="modal">
-                <i class="fa-solid fa-magnifying-glass text-white"></i>
+            <div class="search cursor-pointer d-md-block d-none" data-bs-target="#searchModal" data-bs-toggle="modal">
+                <svg height="20" width="20">
+                    <use href="../assets/images/icons.svg#icon-search"></use>
+                </svg>
             </div>
 
             <!--Search Modal-->
@@ -79,28 +80,28 @@
                         <hr class="border-0"/>
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item d-flex gap-2 align-items-center">
-                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                <svg viewBox="0 0 16 16">
                                     <use href="../assets/images/icons.svg#icon-next"></use>
                                 </svg>
                                 <a class="nav-link flex-grow-1 active" aria-current="page" href="/">HOME</a>
                             </li>
                             <li class="nav-item d-flex gap-2 align-items-center">
-                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                <svg viewBox="0 0 16 16">
                                     <use href="../assets/images/icons.svg#icon-next"></use>
                                 </svg>
                                 <a href="/products.html" class="nav-link flex-grow-1">PRODUCTS</a></li>
                             <li class="nav-item d-flex gap-2 align-items-center">
-                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                <svg viewBox="0 0 16 16">
                                     <use href="../assets/images/icons.svg#icon-next"></use>
                                 </svg>
                                 <a href="/contact-us.html" class="nav-link flex-grow-1">CONTACT US</a></li>
                             <li class="nav-item d-flex gap-2 align-items-center">
-                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                <svg viewBox="0 0 16 16">
                                     <use href="../assets/images/icons.svg#icon-next"></use>
                                 </svg>
                                 <a href="/about-us.html" class="nav-link flex-grow-1">ABOUT US</a></li>
                             <li class="nav-item d-flex gap-2 align-items-center">
-                                <svg class="sprite-icon" viewBox="0 0 16 16">
+                                <svg viewBox="0 0 16 16">
                                     <use href="../assets/images/icons.svg#icon-next"></use>
                                 </svg>
                                 <a href="/gallery.html" class="nav-link flex-grow-1">GALLERY</a></li>
@@ -303,19 +304,19 @@
                 <div class="col-lg-4 col-12 mb-0 mb-lg-0">
                     <div class="contact-info">
                         <p class="contact-detail justify-content-center justify-content-lg-start">
-                            <svg class="sprite-icon" viewBox="0 0 16 20">
+                            <svg width="20" height="20">
                                 <use href="../assets/images/icons.svg#icon-location"></use>
                             </svg>
                             <a href="#" class="text-white">DAS Tower, Lazimpat, 44600, Kathmandu, Nepal</a>
                         </p>
                         <p class=" contact-detail justify-content-center justify-content-lg-start">
-                            <svg class="sprite-icon" viewBox="0 0 16 20">
+                            <svg width="20" height="20">
                                 <use href="../assets/images/icons.svg#icon-phone"></use>
                             </svg>
                             <a href="tel:+977-9808111174" class="text-white">+977-9808111174</a>
                         </p>
                         <p class=" contact-detail justify-content-center justify-content-lg-start">
-                            <svg class="sprite-icon" viewBox="0 0 15 13">
+                            <svg width="20" height="20">
                                 <use href="../assets/images/icons.svg#icon-email"></use>
                             </svg>
                             <a href="mailto:leodlibra@gmail.com" class="text-white">leodlibra@gmail.com</a>
@@ -324,26 +325,26 @@
                     <div class="social-links justify-content-center justify-content-lg-start">
                         <a href="/"
                            class="social d-flex align-items-center justify-content-center text-white text-decoration-none">
-                            <i class="fa-brands fa-instagram"></i>
+                            <svg height="20" width="20">
+                                <use href="../assets/images/icons.svg#icon-instagram"></use>
+                            </svg>
                         </a>
                         <a href="/"
                            class="social d-flex align-items-center justify-content-center text-white text-decoration-none">
-                            <i class="fa-brands fa-facebook-f"></i>
+                            <svg height="20" width="20">
+                                <use href="../assets/images/icons.svg#icon-facebook"></use>
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copyright d-flex flex-lg-row flex-column justify-content-between align-items-center row-gap-3">
+        <div class="copyright d-flex flex-lg-row flex-column justify-content-between align-items-center row-gap-md-3 row-gap-2">
             <div class="section-left text-white small">
                 Copyright &copy; 2025 - All Rights Reserved
             </div>
-            <div class="section-right">
-                <ul class="list-unstyled small mb-0 footer-nav d-flex flex-wrap mb-0">
-                    <li class="mb-0"><a class="text-white nav-item text-decoration-none" href="/about-us">About Us</a>
-                    </li>
-                    <li><a class="text-white nav-item text-decoration-none" href="/site-map">Site Map</a></li>
-                </ul>
+            <div class="section-right text-white small">
+                Powered By ⚡ NepNutrition
             </div>
         </div>
     </div>
