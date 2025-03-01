@@ -102,7 +102,7 @@ function purgeCSS() {
 }
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, html, assets));
+const build = gulp.series(clean, gulp.parallel(styles, html, assets), purgeCSS);
 const dev = gulp.series(build, watch);
 
 // Export tasks
@@ -111,7 +111,7 @@ export {
   styles,
   html,
   assets,
-  // purgeCSS,
+  purgeCSS,
   build,
   dev
 };
