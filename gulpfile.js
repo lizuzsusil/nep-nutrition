@@ -93,7 +93,7 @@ function purgeCSS() {
         content: [paths.purgeSrc.html],
         safelist: {
           standard: [/^is-/, /^has-/],
-          deep: [/^show/, /^col/],
+          deep: [/^show/, /^col/, /^slick/, /^modal/],
         }
       }))
       // .pipe(cleanCSS())
@@ -110,8 +110,8 @@ export {
   clean,
   styles,
   html,
+    purgeCSS,
   assets,
-  purgeCSS,
   build,
   dev
 };

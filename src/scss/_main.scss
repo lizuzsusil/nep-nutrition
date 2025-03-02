@@ -5802,7 +5802,10 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop.show {
-  opacity: var(--npn-backdrop-opacity);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1020;
 }
 
 .modal-header {

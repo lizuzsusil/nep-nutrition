@@ -323,3 +323,16 @@
     }
   }
 }
+
+//PopupModal
+
+.popup-modal {
+  .modal-body {
+    max-height: calc(100dvh - 200px);
+    overflow: auto;
+  }
+  .popup-btn-close {
+    background-color: #BB2124;
+    color: #fff;
+  }
+}

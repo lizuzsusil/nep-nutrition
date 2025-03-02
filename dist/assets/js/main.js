@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    setTimeout(function () {
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+    }, 5000);
+
     $('.latest-product-slider').slick({
         dots: true,
         arrows: false,

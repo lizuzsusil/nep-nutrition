@@ -104,9 +104,11 @@
         <div class="wrapper">
             <div class="title-section mb-5 d-flex justify-content-between align-items-center flex-md-row flex-column">
                 <h2 class="text-white fw-bold d-inline-block">Latest Products</h2>
-                <a href="#" class="text-white text-decoration-none">Explore <svg width="16" height="16">
-                    <use href="./assets/images/icons.svg#icon-next"></use>
-                </svg></a>
+                <a href="#" class="text-white text-decoration-none">Explore
+                    <svg width="16" height="16">
+                        <use href="./assets/images/icons.svg#icon-next"></use>
+                    </svg>
+                </a>
             </div>
             <div class="latest-product-slider">
                 @@include('components/latestProduct.html')
@@ -145,6 +147,26 @@
         </div>
     </section>
 </main>
+
+
+<!-- Modal PopUp -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-xl flex-column justify-content-center popup-modal">
+        <div class="bg-transparent border-0 modal-content rounded-0">
+            <div class="bg-dusty-grey modal-body text-white">
+                This modal appears 5 seconds after page load for testing purposes.
+                <img src="./assets/images/pexels-anush-1431282.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="border-0 justify-content-center modal-footer">
+                <button type="button" class="btn btn-sm popup-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @@include('components/footer.html')
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
