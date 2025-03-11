@@ -328,11 +328,43 @@
 
 .popup-modal {
   .modal-body {
-    max-height: calc(100dvh - 200px);
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #787878;
+    --sb-size: 5px;
+    max-height: calc(100dvh - 80px);
     overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: var(--sb-size)
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 5px;
+
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+      .modal-body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+      }
+    }
   }
+
   .popup-btn-close {
+    position: absolute;
+    right: -17px;
+    top: -18px;
     background-color: #BB2124;
     color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    padding: 4px;
+    background-size: 10px;
   }
 }

@@ -50,3 +50,28 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
+
+.product-page .product-img {
+  margin: 0 auto 24px auto;
+  display: block;
+  width: 70%;
+}
+@media all and (min-width: 992px) {
+  .product-page .product-img {
+    width: 50%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .product-page .product-img {
+    width: 40%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+.product-page .product-detail {
+  clear: right;
+}
+.product-page .product-detail .dashed-border {
+  opacity: 0.75;
+}

@@ -60,9 +60,27 @@
   }
 }
 
+.product-page {
+  .product-img {
+    margin: 0 auto 24px auto;
+    display: block;
+    width: 70%;
+    @media all and (min-width: 992px) {
+      width: 50%;
+    }
+    @media all and (min-width: 1024px) {
+      width: 40%;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
 
+  .product-detail {
+    clear: right;
 
-
-
-
-
+    .dashed-border {
+      opacity: 0.75;
+    }
+  }
+}
