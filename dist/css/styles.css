@@ -13162,6 +13162,7 @@ table tr:hover,
   background: #dfa100;
   background: linear-gradient(90deg, rgb(223, 161, 0) 69%, rgba(255, 255, 255, 0) 69%);
   margin: 0 10px;
+  height: 320px;
 }
 .product-card.home .product-info {
   position: relative;
@@ -13173,6 +13174,7 @@ table tr:hover,
 .product-card.home .product-info-wrapper {
   margin: 20px 0;
   width: 70%;
+  height: calc(100% - 50px);
 }
 .product-card.home .product-image {
   position: absolute;
