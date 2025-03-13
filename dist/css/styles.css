@@ -2671,6 +2671,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1200px) {
+  .mb-xl-0 {
+    margin-bottom: 0 !important;
+  }
   .column-gap-xl-0 {
     -moz-column-gap: 0 !important;
          column-gap: 0 !important;
