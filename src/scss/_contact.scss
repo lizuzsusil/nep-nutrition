@@ -324,6 +324,12 @@
       z-index: -1;
     }
   }
+  .content{
+    margin-inline: auto;
+    @media all and (min-width: 576px) {
+      margin-inline: inherit;
+    }
+  }
 }
 
 //PopupModal
