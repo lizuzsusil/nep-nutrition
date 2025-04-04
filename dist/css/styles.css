@@ -2150,6 +2150,11 @@ textarea.form-control-lg {
             mask-position: -200% 0%;
   }
 }
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
 
 .sticky-top {
   position: sticky;
