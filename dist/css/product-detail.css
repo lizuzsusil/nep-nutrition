@@ -3,7 +3,6 @@
   padding: 0.75rem;
 }
 .product-card .content-wrapper {
-  position: relative;
   z-index: 1;
 }
 .product-card .img-wrapper {
@@ -33,6 +32,7 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
+  pointer-events: none;
 }
 .product-card .hover-content {
   position: absolute;
