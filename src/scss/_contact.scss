@@ -130,11 +130,20 @@
 .gallery {
   img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    max-height: 150px;
     transition: transform 0.3s;
+    @media all and (min-width: 992px) {
+      height: 210px;
+      max-height: 210px;
+    }
+    @media all and (min-width: 1200px) {
+      height: 300px;
+      max-height: 300px;
+    }
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 }
